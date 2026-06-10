@@ -1,0 +1,124 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Bank Management System</title>
+    
+</head>
+<body>
+
+    <h1>Bank Management System</h1>
+    
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bank Project</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="box">
+        <h1>🏦 Bank Account</h1>
+
+        <input type="text" placeholder="Account Number">
+        <br><br>
+
+        <input type="number" placeholder="Amount">
+        <br><br>
+
+        <button>Debit</button>
+        <button>Credit</button>
+
+        <h3>Balance: ₹0</h3>
+    </div>
+
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Bank Management System</title>
+</head>
+<body>
+
+<h1>Bank Management System</h1>
+
+<form method="POST">
+
+    <input type="number" name="amount" placeholder="Amount" required>
+    <br><br>
+
+    <button type="submit" name="action" value="debit">
+        Debit
+    </button>
+
+    <button type="submit" name="action" value="credit">
+        Credit
+    </button>
+
+</form>
+
+<h2>Balance: ₹{{ balance }}</h2>
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bank Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🏦 Bank Management System</h1>
+
+    <form method="POST">
+
+        <input type="text"
+         name="account" 
+         placeholder="Enter Account Number" required>
+
+        <input type="number"
+               name="amount"
+               step="any"
+               placeholder="Enter Amount"
+               required>
+
+        <br>
+
+        <button class="debit"
+                type="submit"
+                name="action"
+                value="debit">
+            Debit
+        </button>
+
+        <button class="credit"
+                type="submit"
+                name="action"
+                value="credit">
+            Credit
+        </button>
+
+    </form>
+
+    <div class="balance">
+        Balance : ₹{{ balance }}
+        <h3>Account Number :{{ account}}</h3>
+    </div>
+
+</div>
+
+</body>
+</html>
